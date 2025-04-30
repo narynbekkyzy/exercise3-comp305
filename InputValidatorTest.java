@@ -16,8 +16,9 @@ public class InputValidatorTest {
      */
     @Test
     public void testNameFieldIsNotEmpty() {
-        // assertTrue(InputValidator.validateNameField("..."));
-        // assertFalse (InputValidator.validateNameField("..."));
+        assertTrue(InputValidator.validateNameField("John"));
+        assertFalse (InputValidator.validateNameField(""));
+        assertFalse (InputValidator.validateNameField(" "));
     }
     
     // CREATE MORE TESTS HERE
