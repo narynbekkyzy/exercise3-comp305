@@ -10,8 +10,11 @@ import java.text.BreakIterator; //found off google, input off github that helps 
 import java.util.Locale; //helps with character definitions 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Arrays;
+import java.util.List;
 
 public class InputValidator {
+    //Jair's Part
     //Jair's Part
 
     public static boolean validatelastNameField(String input) 
