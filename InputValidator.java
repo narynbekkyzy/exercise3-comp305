@@ -37,19 +37,13 @@ public class InputValidator {
      *         and contains upper-case, lower-case and digit, false otherwise
      */
     public static boolean validatePasswordField(String password) {
-        if (password == null) return false;
+        // Check if the password is null or empty and has at least 8 characters
+        if (password == null || password.length() < 8) return false;
 
-        if (password.length() < 8) return false;
-
-        boolean hasUpper = false;
-        boolean hasLower = false;
-        boolean hasDigit = false;
-
-        for (char ch : password.toCharArray()) {
-            if (Character.isUpperCase(ch)) hasUpper = true;
-            if (Character.isLowerCase(ch)) hasLower = true;
-            if (Character.isDigit(ch)) hasDigit = true;
-        }
+        // Check if the password contains at least one upper-case letter, lower-case letter, and digit
+        boolean hasUpper = password.chars().anyMatch(Character::isUpperCase);
+        boolean hasLower = password.chars().anyMatch(Character::isLowerCase);
+        boolean hasDigit = password.chars().anyMatch(Character::isDigit);
 
         return hasUpper && hasLower && hasDigit;
     }
