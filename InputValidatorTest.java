@@ -9,10 +9,8 @@ import static org.junit.Assert.*;
 public class InputValidatorTest {
     
     /*
-     * Example test method for a possible Name field validator method in your 
+     * Test method for a Name field validator method in the 
      * InputValidator class.
-     * For more information about assertion tests check: 
-     * https://www.tutorialspoint.com/junit/junit_using_assertion.htm
      */
     @Test
     public void testNameFieldIsNotEmpty() {
@@ -49,7 +47,48 @@ public class InputValidatorTest {
     public void testNameNull() {
         assertFalse(InputValidator.validateNameField(null));
     }
+
+    /*
+     * Test method for a Password field validator method in the 
+     * InputValidator class.
+     */
+
+    @Test
+    public void testPasswordFieldIsNotEmpty() {
+        assertTrue(InputValidator.validatePasswordField("Password123"));
+        assertFalse(InputValidator.validatePasswordField(""));
+        assertFalse(InputValidator.validatePasswordField(" "));
+    }
+
+    @Test
+    public void testPasswordMinLength() {
+        assertFalse(InputValidator.validatePasswordField("Pass12"));
+        assertTrue(InputValidator.validatePasswordField("Password123"));
+    }
     
-    // CREATE MORE TESTS HERE
+    @Test
+    public void testPasswordWithUpperCase() {
+        assertTrue(InputValidator.validatePasswordField("Password123"));
+        assertFalse(InputValidator.validatePasswordField("password123"));
+    }
+
+    @Test 
+    public void testPasswordWithLowerCase() {
+        assertTrue(InputValidator.validatePasswordField("Password123"));
+        assertFalse(InputValidator.validatePasswordField("PASSWORD123"));
+    }
+
+    @Test 
+    public void testPasswordWithDigit() {
+        assertTrue(InputValidator.validatePasswordField("Password123"));
+        assertFalse(InputValidator.validatePasswordField("Password"));
+    }
+
+    @Test
+    public void testPasswordWithSpecialCharacters() {
+        assertTrue(InputValidator.validatePasswordField("P@ssw0rd!"));
+        assertTrue(InputValidator.validatePasswordField("Password123!"));
+        assertFalse(InputValidator.validatePasswordField("Password123"));
+    }
     
 }

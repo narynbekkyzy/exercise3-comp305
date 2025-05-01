@@ -5,7 +5,6 @@
  */
 
 public class InputValidator {
-
     /**
     * Validates the name field.
      * - Must not be null or empty
@@ -25,5 +24,19 @@ public class InputValidator {
         // Check if the name contains only letters and spaces
         if (!name.trim().matches("[a-zA-Z\\s]+")) return false;
         return true;
-    }    
+    } 
+    
+    /**
+    * Validates the password field. 
+     * - Must not be empty
+     * - At least 8 characters long
+     * - At least one upper-case, lower-case and digit.
+     * - Special characters are allowed    
+     * @param password the password to validate
+     * @return true if the password is not empty, has at least 8 characters,
+     *         and contains upper-case, lower-case and digit, false otherwise
+     */
+    
+
+
 }
