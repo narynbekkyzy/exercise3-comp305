@@ -102,5 +102,20 @@ public class InputValidatorTest {
         assertTrue(InputValidator.validateTitleField("Some Title"));
         assertFalse(InputValidator.validateTitleField("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aeneanejfefhefsdsk"));
     }
+
+    @Test
+    public void testValidMediums() {
+        assertTrue(InputValidator.validateMediumField("Oil"));
+        assertTrue(InputValidator.validateMediumField("Acrylic"));
+        assertTrue(InputValidator.validateMediumField("Watercolor"));
+    }
     
+    @Test
+    public void testInvalidMedium() {
+        assertFalse(InputValidator.validateMediumField("Crayon"));  // Not in dropdown
+        assertFalse(InputValidator.validateMediumField(""));         // Empty string
+        assertFalse(InputValidator.validateMediumField("   "));      // Just spaces
+        assertFalse(InputValidator.validateMediumField(null));       // Null input
+    }
+        
 }
