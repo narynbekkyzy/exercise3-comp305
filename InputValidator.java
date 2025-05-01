@@ -48,5 +48,19 @@ public class InputValidator {
         return hasUpper && hasLower && hasDigit;
     }
 
+     /**
+    * Validates the title field. 
+     * - Must not be empty
+     * - Less than 100 characters long   
+     * @param title the title to validate
+     * @return true if the title is not empty and less than 100 characters
+     */
+
+     public static boolean validateTitleField(String title) {
+        if (title == null || title.trim().isEmpty()) {
+            return false;
+        }
+        return title.length() <= 100;      
+    }
 
 }
