@@ -4,9 +4,9 @@ Authors: Jair, Edith, Maggie, Nailya
 
 Descriptions of classes
 -
-Input Validator: The input validator is where most of our teams code went. This is the class that has the requirements for 
+Input Validator: The main class where most of our team’s validation logic is implemented. This class contains multiple static methods that check whether user input meets specific criteria. Each method corresponds to a different form field, such as name, password, phone number, description, and more. The validations cover requirements like:
 
-Input Validator Test: 
+Input Validator Test: Contains all the unit tests written using JUnit to ensure that the validation methods in InputValidator work correctly.
 
 
 How to Use:
