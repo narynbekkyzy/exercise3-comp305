@@ -42,8 +42,6 @@ public class InputValidator
         return false;
     }
 
-
-
  
  public static boolean validatePhonenumber(String phoneNumber) // started to use regular expression (Maddie in the CC helped)
      {
