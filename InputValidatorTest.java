@@ -8,12 +8,6 @@ import static org.junit.Assert.*;
 
 
 public class InputValidatorTest {
-    
-    /*
-     * Test method for a Name field validator method in the 
-     * InputValidator class.
-     */
-
     // Jair's Tests 
 
     public void testCases() // We are testing to ensure that the Last name has more than 2 characters and accepts Diacritic marks
@@ -51,6 +45,11 @@ public class InputValidatorTest {
     }
 
     // Nailia's Tests
+
+    /*
+     * Tests for a Name field validator method in the 
+     * InputValidator class.
+     */
 
     @Test
     public void testNameFieldIsNotEmpty() 
@@ -90,7 +89,7 @@ public class InputValidatorTest {
     }
     
     /*
-     * Test method for a Password field validator method in the 
+     * Tests for a Password field validator method in the 
      * InputValidator class.
      */
 
@@ -130,6 +129,11 @@ public class InputValidatorTest {
          assertTrue(InputValidator.validatePasswordField("P@ssw0rd!"));
          assertTrue(InputValidator.validatePasswordField("Password123!"));
      }
+
+     /*
+     * Tests for a Title field validator method in the 
+     * InputValidator class.
+     */
  
      @Test
      public void testTitleFieldIsNotEmpty() {
@@ -144,6 +148,11 @@ public class InputValidatorTest {
          assertFalse(InputValidator.validateTitleField("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aeneanejfefhefsdsk"));
      }
  
+     /*
+     * Tests for a Medium field validator method in the 
+     * InputValidator class.
+     */
+
      @Test
      public void testValidMediums() {
          assertTrue(InputValidator.validateMediumField("Oil"));
