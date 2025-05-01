@@ -16,8 +16,38 @@ public class InputValidatorTest {
      */
     @Test
     public void testNameFieldIsNotEmpty() {
-        // assertTrue(InputValidator.validateNameField("..."));
-        // assertFalse (InputValidator.validateNameField("..."));
+        assertTrue(InputValidator.validateNameField("John"));
+        assertFalse (InputValidator.validateNameField(""));
+        assertFalse (InputValidator.validateNameField(" "));
+    }
+
+    @Test
+    public void testNameMinLength() {
+        assertFalse(InputValidator.validateNameField("A"));
+        assertTrue(InputValidator.validateNameField("Al"));
+    }
+
+    @Test
+    public void testNameWithSpaces() {
+        assertTrue(InputValidator.validateNameField("Nailia Narynbek"));
+    }
+
+    @Test
+    public void testNameWithDiacritics() {
+        assertTrue(InputValidator.validateNameField("Zoë"));
+        assertTrue(InputValidator.validateNameField("Björk"));
+    }
+
+    @Test
+    public void testNameWithInvalidCharacters() {
+        assertFalse(InputValidator.validateNameField("John123"));
+        assertFalse(InputValidator.validateNameField("!@#"));
+        assertFalse(InputValidator.validateNameField("Anna*"));
+    }
+
+    @Test
+    public void testNameNull() {
+        assertFalse(InputValidator.validateNameField(null));
     }
     
     // CREATE MORE TESTS HERE
