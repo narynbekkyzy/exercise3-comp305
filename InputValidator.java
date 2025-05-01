@@ -4,6 +4,9 @@
  * methods to validate inputs from the user. 
  */
 
+import java.util.Arrays;
+import java.util.List;
+
 public class InputValidator {
     /**
     * Validates the name field.
@@ -22,7 +25,7 @@ public class InputValidator {
         if (name.trim().length() < 2) return false;
 
         // Check if the name contains only letters and spaces
-        if (!name.trim().matches("[a-zA-Z\\s]+")) return false;
+        if (!name.trim().matches("[\\p{L}\\s]+")) return false;
         return true;
     } 
     
@@ -48,7 +51,7 @@ public class InputValidator {
         return hasUpper && hasLower && hasDigit;
     }
 
-     /**
+    /**
     * Validates the title field. 
      * - Must not be empty
      * - Less than 100 characters long   
@@ -63,4 +66,19 @@ public class InputValidator {
         return title.length() <= 100;      
     }
 
+    // Accepted media list (dropdown values)
+    private static final List<String> ACCEPTED_MEDIA = Arrays.asList
+    ("Oil", "Acrylic", "Watercolor", "Pastel", "Ink", "Digital", "Mixed Media");
+
+    /**
+     * Validates the painting medium.
+     * - Must not be null or empty
+     * - Must match one of the accepted media
+     * @param medium the input string
+     * @return true if valid, false otherwise
+     */
+    public static boolean validateMediumField(String medium) {
+        if (medium == null || medium.trim().isEmpty()) return false;
+        return ACCEPTED_MEDIA.contains(medium.trim());
+    }
 }

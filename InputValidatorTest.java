@@ -113,9 +113,9 @@ public class InputValidatorTest {
     @Test
     public void testInvalidMedium() {
         assertFalse(InputValidator.validateMediumField("Crayon"));  // Not in dropdown
-        assertFalse(InputValidator.validateMediumField(""));         // Empty string
-        assertFalse(InputValidator.validateMediumField("   "));      // Just spaces
-        assertFalse(InputValidator.validateMediumField(null));       // Null input
+        assertFalse(InputValidator.validateMediumField(""));         
+        assertFalse(InputValidator.validateMediumField("   "));    
+        assertFalse(InputValidator.validateMediumField(null));      
     }
         
 }
