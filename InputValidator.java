@@ -36,7 +36,23 @@ public class InputValidator {
      * @return true if the password is not empty, has at least 8 characters,
      *         and contains upper-case, lower-case and digit, false otherwise
      */
-    
+    public static boolean validatePasswordField(String password) {
+        if (password == null) return false;
+
+        if (password.length() < 8) return false;
+
+        boolean hasUpper = false;
+        boolean hasLower = false;
+        boolean hasDigit = false;
+
+        for (char ch : password.toCharArray()) {
+            if (Character.isUpperCase(ch)) hasUpper = true;
+            if (Character.isLowerCase(ch)) hasLower = true;
+            if (Character.isDigit(ch)) hasDigit = true;
+        }
+
+        return hasUpper && hasLower && hasDigit;
+    }
 
 
 }

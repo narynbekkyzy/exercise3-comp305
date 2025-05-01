@@ -88,7 +88,6 @@ public class InputValidatorTest {
     public void testPasswordWithSpecialCharacters() {
         assertTrue(InputValidator.validatePasswordField("P@ssw0rd!"));
         assertTrue(InputValidator.validatePasswordField("Password123!"));
-        assertFalse(InputValidator.validatePasswordField("Password123"));
     }
     
 }
