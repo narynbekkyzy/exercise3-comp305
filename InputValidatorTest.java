@@ -89,5 +89,18 @@ public class InputValidatorTest {
         assertTrue(InputValidator.validatePasswordField("P@ssw0rd!"));
         assertTrue(InputValidator.validatePasswordField("Password123!"));
     }
+
+    @Test
+    public void testTitleFieldIsNotEmpty() {
+        assertTrue(InputValidator.validateTitleField("Some Title"));
+        assertFalse(InputValidator.validateTitleField(""));
+        assertFalse(InputValidator.validateTitleField(" "));
+    }
+
+    @Test 
+    public void testTitleLength() {
+        assertTrue(InputValidator.validateTitleField("Some Title"));
+        assertFalse(InputValidator.validateTitleField("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aeneanejfefhefsdsk"));
+    }
     
 }
