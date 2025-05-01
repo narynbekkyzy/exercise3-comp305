@@ -47,6 +47,4 @@ public class InputValidator {
 
         return hasUpper && hasLower && hasDigit;
     }
-
-
 }
