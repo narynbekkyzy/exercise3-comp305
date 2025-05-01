@@ -43,5 +43,4 @@ import static org.junit.Assert.*;
          assertFalse(InputValidator.isValidDateFormat("'20041221'")); //testing for dates without the "-" 
          assertFalse(InputValidator.isValidDateFormat("12-21-2004")); //testing if has a diffferent formatting 
     }
-    
 }
