@@ -40,11 +40,13 @@ public class InputValidator {
         // Check if the password is null or empty and has at least 8 characters
         if (password == null || password.length() < 8) return false;
 
-        // Check if the password contains at least one upper-case letter, lower-case letter, and digit
+        // Check if the password contains at least one upper-case letter,lower-case letter and digit.
         boolean hasUpper = password.chars().anyMatch(Character::isUpperCase);
         boolean hasLower = password.chars().anyMatch(Character::isLowerCase);
         boolean hasDigit = password.chars().anyMatch(Character::isDigit);
 
         return hasUpper && hasLower && hasDigit;
     }
+
+
 }
