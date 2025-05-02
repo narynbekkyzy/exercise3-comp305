@@ -15,7 +15,6 @@ import java.util.List;
 
 public class InputValidator {
     //Jair's Part
-    //Jair's Part
 
     public static boolean validatelastNameField(String input) 
         { //This is our boolean that will return true if more than 2 letters 
@@ -168,9 +167,6 @@ public class InputValidator {
             return false;
         }
         return true;
-        
-
-
     }
 
     /**
@@ -193,14 +189,13 @@ public class InputValidator {
                 return true;
     }
     
-/**
+    /**
      * Validates the dimensions.
      * - Must not be null or empty
      * - Must match the format/pattern 
      * @param dimensions the input string
      * @return true if valid, false otherwise
      */
-    
     
     public static boolean validateDimension(String dimensions) {
         if (dimensions == null || dimensions.trim().isEmpty()) {
@@ -228,8 +223,7 @@ public class InputValidator {
             return true;
         }
     }
-
     return false;// Does not match then false 
-}
+    }
 }
     

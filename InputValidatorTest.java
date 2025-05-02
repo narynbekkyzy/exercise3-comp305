@@ -171,7 +171,7 @@ public class InputValidatorTest {
 
      //Maggie's part
 
-      /*
+    /*
      * Tests for a Username field validator method in the 
      * InputValidator class.
      */
@@ -188,6 +188,7 @@ public class InputValidatorTest {
         assertFalse(InputValidator.validateUsername("abcdefghijklmnopqrstu"));
         assertTrue(InputValidator.validateUsername("abc"));
     }
+
     /*
      * Tests for a Postal Code validator method in the 
      * InputValidator class.
@@ -196,16 +197,15 @@ public class InputValidatorTest {
     public void testValidUSPostalCodes() {
         assertTrue(InputValidator.validatePostalCode("12345"));//"Standard 5-digit code",
         assertTrue(InputValidator.validatePostalCode("00000"));//"All zeros",
-        
     }
 
     public void testInvalidUSPostalCodes() {
         // Length tests
         assertFalse(InputValidator.validatePostalCode("123345"));//No unit
         assertFalse(InputValidator.validatePostalCode(""));//Empty
-        
     }
-     /*
+
+    /*
      * Tests for Dimensions validator method in the 
      * InputValidator class.
      */
