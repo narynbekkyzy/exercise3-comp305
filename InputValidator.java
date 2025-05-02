@@ -150,12 +150,20 @@ public class InputValidator {
 
 
     //Maggie's part
+
+    /**
+     * Validates the username.
+     * - Must not be null or empty
+     * - Can't be greater than 20 
+     * @param username the input string
+     * @return true if valid, false otherwise
+     */
     public static boolean validateUsername(String username){
         // Left blank 
         if( username == null || username.isEmpty() ){
             return false;
         }
-        // Greater than 20 
+        // Must not be 20 
         if( username.length() > 20){
             return false;
         }
@@ -164,6 +172,15 @@ public class InputValidator {
 
 
     }
+
+    /**
+     * Validates the Postal Code.
+     * - Must not be null or empty
+     * - Code may not be grater than 5. 
+     * @param postalcode the input string
+     * @return true if valid, false otherwise
+     */
+
     public static boolean validatePostalCode(String postalcode){
         // Left empty/blank 
         if (postalcode == null) {
@@ -176,7 +193,13 @@ public class InputValidator {
                 return true;
     }
     
-
+/**
+     * Validates the dimensions.
+     * - Must not be null or empty
+     * - Must match the format/pattern 
+     * @param dimensions the input string
+     * @return true if valid, false otherwise
+     */
     
     
     public static boolean validateDimension(String dimensions) {
