@@ -4,7 +4,7 @@ Authors: Jair, Edith, Maggie, Nailya
 
 Descriptions of classes
 -
-Input Validator: The main class where most of our team’s validation logic is implemented. This class contains multiple static methods that check whether user input meets specific criteria. Each method corresponds to a different form field, such as name, password, phone number, description, and more. The validations cover requirements like:
+Input Validator: The main class where most of our team’s validation logic is implemented. This class contains multiple static methods that check whether user input meets specific criteria. Each method corresponds to a different form field, such as name, password, phone number, description, and more. The validations cover various requirements that were requested.
 
 Input Validator Test: Contains all the unit tests written using JUnit to ensure that the validation methods in InputValidator work correctly.
 
@@ -16,8 +16,8 @@ To use this code, before beginning to edit the code which I will refer to later,
 
 Reflection 
 -
-Our team did face some challenges when trying to merge, as most of our code was written in the same lines there were problems but it was solved with some committing, pulling, editing some spaces and what helped was taking everyone’s merging one step at a time and fixing any issues we found along the way to ensure that our code worked by the end instead of trying to find the error from all of our code.  
+Our team faced some challenges during the merge process because much of our code was written on the same lines, which caused conflicts. We resolved these issues through a combination of committing, pulling, and carefully editing minor differences like spaces. What really helped was merging each person’s changes one at a time and addressing any conflicts as they came up, which made it easier to debug and ensure everything worked by the end.
 
-When expanding or refactoring our validator, we could look at further conventions of what should or shouldn't be included in emails, international beginnings of phone numbers i.e. +1 for American numbers but +52. We also know that there are probably many commands inside the class input validator that could be turned into one that we missed to ensure efficiency. 
+When expanding or refactoring our validator, we could consider additional conventions, such as what should or shouldn’t be allowed in email formats and international phone number prefixes (e.g., +1 for the U.S. or +52 for Mexico). We also realized that there are likely several repeated commands within the InputValidator class that could be refactored into a single, more efficient function that we initially missed.
 
-In general, we enjoyed coding in this format as it was a rewarding feeling once our code actually passed and it helped save time in terms of debugging as it, we took it step by step to ensure that our code worked.   
+In general, we enjoyed coding in this format as it was a rewarding feeling once our code actually passed. the step-by-step approach helped save time by making debugging more manageable and efficient.  
